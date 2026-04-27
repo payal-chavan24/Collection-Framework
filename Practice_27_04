@@ -1,0 +1,126 @@
+package com.collectionFramework;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class Practice {
+	public static void main(String[] args) {
+
+//Create an ArrayList of integers and print all elements using a for-each loop.
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(22);
+		list.add(4);
+		list.add(90);
+		list.add(12);
+		list.add(55);
+		list.add(55);
+		for (Integer integer : list) {
+			System.out.print(integer + " ");
+
+		}
+		System.out.println();
+		// Store 5 student names in a list and display them using a for-each loop.
+		ArrayList<String> list1 = new ArrayList<>();
+		list1.add("Payal");
+		list1.add("RAj");
+		list1.add("Sneha");
+		list1.add("neha");
+		list1.add("Chitra");
+		for (String str : list1) {
+			System.out.print(str + " ");
+
+		}
+		System.out.println();
+		// Find the sum of all elements in a list using a for-each loop
+		int sum = 0;
+		for (Integer num : list) {
+
+			sum = sum + num;
+
+		}
+		System.out.print("Total sum of all elements =" + sum);
+		System.out.println();
+//Count how many elements are even numbers using a for-each loop.
+		int count = 0;
+		for (Integer num : list) {
+
+			if (num % 2 == 0) {
+				count++;
+
+			}
+
+		}
+		System.out.print("Number of even number in list =" + count);
+		System.out.println();
+		// Print only duplicate elements from a list using a for-each loop.
+		Set<Integer> seen = new HashSet<>();
+		Set<Integer> duplicate = new HashSet<>();
+
+		for (Integer num : list) {
+
+			if (!(seen.add(num))) {
+				duplicate.add(num);
+
+			}
+
+		}
+		System.out.print("Duplicates elements in list=" + duplicate);
+		System.out.println();
+		// Convert all strings in a list to uppercase using a for-each loop.
+		for (String str : list1) {
+			char ch = str.charAt(0);
+			if (ch >= 'a' && ch <= 'z') {
+				System.out.print(str.toUpperCase());
+
+			}
+		}
+		System.out.println();
+		// Find the maximum element in a list using a for-each loop.
+		int max = list.get(0);
+		for (Integer integer : list) {
+			if (max < integer) {
+				max = integer;
+
+			}
+		}
+		System.out.println("Max elements in list is =" + max);
+		System.out.println();
+//Iterate through a HashSet and print all elements using a for-each loop.
+		HashSet<Integer> hash = new HashSet<>();
+		hash.add(34);
+		hash.add(345);
+		hash.add(21);
+		for (Integer integer : hash) {
+			System.out.print(integer + " ");
+		}
+		System.out.println("");
+		// Iterate through a HashMap and print:
+
+//keys
+//values
+//using a for-each loop.
+		HashMap<Integer, String> map = new HashMap();
+		map.put(1, "Payal");
+		map.put(2, "shittal");
+		map.put(3, "Priya");
+		map.put(4, "soni");
+		for (Map.Entry<Integer, String> entry : map.entrySet()) {
+			System.out.println(entry.getKey() + " " + entry.getValue());
+
+		}
+		System.out.println();
+		//From a list of integers, print only those elements that are greater than 50 using a for-each loop.
+		for (Integer num : list) {
+
+			if (num >50) {
+				
+				System.out.println(num);
+
+			}
+		}
+
+	}
+}
